@@ -1,0 +1,24 @@
+---
+title: "install_archR"
+author: "T Attenborough"
+date: "2023-10-04"
+output: html_document
+---
+
+```{r}
+library(Signac)
+library(Seurat)
+library(bambu)
+library(MACSr)
+library(tidyverse)
+```
+
+```{r}
+devtools::install_github("GreenleafLab/ArchR", ref="master", repos = BiocManager::repositories())
+```
+
+```{r}
+library(ArchR)
+ArchR::installExtraPackages()
+```
+
